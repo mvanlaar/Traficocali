@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width initial-scale=1.0" />
+	<title>Traficocali</title>
+
+	<link rel="stylesheet" href="css/tema_mobile.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.3.1.min.css" />
+
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.3.1.js"></script>
+	
+</head>
+<body>
+
+	<!-- PAGINA DE INICIO -->
+	<section data-role="page" id="inicio">
+		<header data-role="header" data-position="fixed">
+			<h1>Contacto</h1>
+			<a href="index.html" data-role="button" data-icon="arrow-l" data-corners="false">Atras</a>
+		</header>
+
+		<section data-role="content">
+			<p>Este formulario es para sugerencias o quejas sobre esta aplicación.</p>
+
+			<label for="direccion">Email</label>
+		    <input type="text" name="email" id="name" value="" data-corners="false" />
+
+		    <label for="direccion">Asunto</label>
+		    <input type="text" name="asunto" id="name" value="" data-corners="false" />
+
+		    <label for="mensaje">Mensaje</label>
+			<textarea cols="40" rows="8" name="mensaje" id="textarea"></textarea>
+
+			<a href="#datos-taxi" data-role="button" data-corners="false" data-theme="f" >Enviar</a>
+		</section>
+
+		<footer data-role="footer" data-position="fixed">
+			<h2>Traficocali App</h2>
+		</footer>
+	</section>
+</body>
+</html>
