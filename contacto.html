@@ -18,7 +18,7 @@
 	<section data-role="page" id="inicio">
 		<header data-role="header" data-position="fixed">
 			<h1>Contacto</h1>
-			<a href="index.html" data-role="button" data-icon="arrow-l" data-corners="false">Atras</a>
+			<a href="index.html" data-role="button" data-icon="arrow-l" data-corners="false" data-iconpos="notext">Atras</a>
 		</header>
 
 		<section data-role="content">
@@ -33,7 +33,14 @@
 		    <label for="mensaje">Mensaje</label>
 			<textarea cols="40" rows="8" name="mensaje" id="textarea"></textarea>
 
-			<a href="#datos-taxi" data-role="button" data-corners="false" data-theme="f" >Enviar</a>
+			
+
+			<div class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	<a href="#datos-taxi" data-role="button" data-corners="false" data-theme="g" >Enviar</a>
+			    </div>
+			    <div class="ui-block-b"><a href="#datos-taxi" data-role="button" data-corners="false" data-theme="d" >Cancelar</a></div>
+			</div>
 		</section>
 
 		<footer data-role="footer" data-position="fixed">

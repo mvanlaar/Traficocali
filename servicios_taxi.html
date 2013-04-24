@@ -17,13 +17,13 @@
 	<section data-role="page" id="masivo">
 		<header data-role="header" data-position="fixed">
 			<h1>Pedir Taxi</h1>
-				<a href="servicios.html" data-role="button" data-icon="arrow-l" data-corners="false">Atras</a>
+				<a href="servicios.html" data-role="button" data-icon="arrow-l" data-corners="false" data-iconpos="notext">Atras</a>
 		</header>
 
 		<div data-role="content">
 
 			<label for="select-choice-min" class="select">Empresa</label>
-			<select name="select-choice-min" id="select-choice-min" data-mini="true" data-corners="false" data-theme="g">
+			<select name="select-choice-min" id="select-choice-min" data-mini="true" data-corners="false" data-theme="f">
 			   <option value="standard">Empresa 1</option>
 			   <option value="rush">Empresa 2</option>
 			</select>
@@ -34,7 +34,14 @@
 		    <label for="barrio">Barrio</label>
 		    <input type="text" name="barrio" id="name" value="" data-corners="false" />
 
-		    <a href="#datos-taxi" data-role="button" data-corners="false" data-theme="g" data-rel="dialog" >Pedir Taxi</a>
+		   
+
+		    <div class="ui-grid-a">
+			    <div class="ui-block-a">
+			    	 <a href="#datos-taxi" data-role="button" data-corners="false" data-theme="g" data-rel="dialog" >Pedir Taxi</a>
+			    </div>
+			    <div class="ui-block-b"><a href="#datos-taxi" data-role="button" data-corners="false" data-theme="d" >Cancelar</a></div>
+			</div>
 
 		</div>
 
