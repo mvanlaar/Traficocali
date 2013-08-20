@@ -11,53 +11,22 @@
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.mobile-1.3.1.js"></script>
 
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"> </script>
-	<script type="text/javascript">
-		window.onload = function() {
-			var options1 = {
-				enableHighAccuracy : true,
-				maximumAge : 60000,
-				timeout : 45000
-			};
-			var lantlong = {
-				lat : "",
-				lon : ""
-			};
-			if (window.navigator.geolocation) {
-				navigator.geolocation.getCurrentPosition(exito, falla,options1);
-				//getCurrentPosition
-			} else {
-				alert("tu broswer no soporta geolocation");
-				return;
-			}
-			function exito(cordenadas) {
-				var lat = cordenadas.coords.latitude;
-				var lon = cordenadas.coords.longitude;
-				lantlong.lat = lat;
-				lantlong.lon = lon;
-				cambio();
-			}
+	<script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBk95Huv4BCG7iNjKpIfLCR9pyzx-oN1pA&sensor=true">
+    </script>
 
-			function falla() {
-				// do algo
-			}
-			function cambio() {
-				//var tmp = document.getElementById("geo").innerHTML="Latitud:"+lantlong.lat+"<br/>"+"longitud:"+lantlong.lon;
-				var mapDiv=document.getElementById("map");
-				var latlng=new google.maps.LatLng( lantlong.lat, lantlong.lon);
-				var options={
-					center:latlng,
-					zoom:15,
-					mapTypeId: google.maps.MapTypeId.ROADMAP
-				};
-				var map=new google.maps.Map(mapDiv,options);
-				// Creamos un marcador y lo posicionamos en el mapa
-				var marcador = new google.maps.Marker({
-				  position: new google.maps.LatLng(lantlong.lat, lantlong.lon),
-				  map: map
-				});
-			}
-		}
+	<script type="text/javascript">
+		$(document).on('ready', function(){
+			var mapOptions = {
+				zoom: 11,
+				center: new google.maps.LatLng(3.4815729165744687, -76.49815678596497), 
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				minZoom: 11,
+				maxZoom: 15,
+				streetViewControl: false
+			};
+			map = new google.maps.Map(document.getElementById('map'), mapOptions);
+		});
 	</script>
 </head>
 <body>
